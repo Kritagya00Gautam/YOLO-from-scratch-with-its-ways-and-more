@@ -49,9 +49,6 @@ python predict.py --weights runs/best.pt --source carton.jpg
 python export_onnx.py --weights runs/best.pt --out yolo.onnx
 ```
 
-## Notes for the Ausadhi carton task
-
-* Augmentation has **no horizontal flip** (mirrored text does not exist).
 * Split train/val **by carton**, not by image, so val mAP is honest.
 * Look at **per-class recall** (`batch_line`, `exp_line`), not only mAP50.
 * Use `--scale n` and `--imgsz 640` for the phone model.
